@@ -401,6 +401,15 @@ transform: translateY(-50%);
     transition: transform ease 0.2s;
 }
 
+.page-ellipsis{
+    display: flex; 
+    align-items: center; 
+    color: var(--dark-blue); 
+    padding: 0 5px;
+}
+
+
+
 /* Dark Mode */
 body.dark header,
 body.dark main section .input-section div input,
@@ -413,7 +422,8 @@ body.dark main div button{
 }
 
 body.dark main section article div,
-body.dark main section article div div ul{
+body.dark main section article div div ul,
+body.dark main section .input-section{
     background: none;
 }
 
@@ -431,7 +441,7 @@ body.dark main section div p,
 body.dark main section ul li,
 body.dark main div button,
 body.dark main section article div span,
-body.dark main section article div ul{
+body.dark main section article div ul li{
     color: var(--white);
 }
 

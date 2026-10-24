@@ -247,7 +247,7 @@ function renderPaginationControls() {
     const endIdx = Math.min(startIdx + chunkSize, totalPages);
 
     if (currentBlock > 0) {
-        pagesHTML += `<li class="page-ellipsis" style="display: flex; align-items: center; color: var(--dark-blue); padding: 0 5px;" tabindex="0">...</li>`;
+        pagesHTML += `<li class="page-ellipsis" tabindex="0">...</li>`;
     }
 
     for(let i = startIdx; i < endIdx; i++){
@@ -257,7 +257,7 @@ function renderPaginationControls() {
     }
 
     if (endIdx < totalPages) {
-        pagesHTML += `<li class="page-ellipsis" style="display: flex; align-items: center; color: var(--dark-blue); padding: 0 5px;" tabindex="0">...</li>`;
+        pagesHTML += `<li class="page-ellipsis"  tabindex="0">...</li>`;
         const lastActive = (totalPages - 1) === appState.pageIndex ? 'selected' : '';
         pagesHTML += `<li class="page-number ${lastActive}" data-index="${totalPages - 1}" tabindex="0">${totalPages}</li>`;
     }
