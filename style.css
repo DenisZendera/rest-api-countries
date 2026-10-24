@@ -221,8 +221,12 @@ transform: translateY(-50%);
    border-radius: 5px;
    overflow: hidden;
    cursor: pointer;
+   transition: transform ease 0.4s;
 }
 
+.card:hover{
+    transform: translateY(-10px);
+}
 .country-flag{
     height: 160px;
     width: 100%;
