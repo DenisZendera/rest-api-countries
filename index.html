@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./preview.jpg">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <title>Rest Countries API</title>
+</head>
+<body>
+    <header>
+        <h1 class="title">Where in the world?</h1>
+
+        <div class="toggle" id="toggle" tabindex="0">
+            <span class="icon" id="icon"><i class="fa-solid fa-moon"></i></span>
+            <p class="mode" id="mode">Dark</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="controls" style="display: none;">
+            <div class="input-section">
+                <div class="input">
+                    <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                    <label for="search"></label>
+                    <input type="text" name="search" placeholder="Search for a country..." class="searchBox" id="search">
+                </div>
+            </div>
+
+            <div class="custom-select-wrapper" id="customSelect">
+                <button type="button" class="select-trigger" aria-haspopup="listbox" aria-expanded="false">
+                    <span>Filter by Region</span>
+                    <i class="fa-solid fa-chevron-down select-arrow"></i>
+                </button>
+                <ul class="select-options" role="listbox">
+                    <li data-value="africa" tabindex="0">Africa</li>
+                    <li data-value="americas" tabindex="0">Americas</li>
+                    <li data-value="asia" tabindex="0">Asia</li>
+                    <li data-value="europe" tabindex="0">Europe</li>
+                    <li data-value="oceania" tabindex="0">Oceania</li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="back-wrapper">
+            <button type="button" class="back-trigger">
+                <i class="fa-solid fa-arrow-left-long left-arrow"></i>
+                <span>Back</span>
+            </button>
+        </div>
+
+        <section class="countries"></section>
+
+        <section class="pagination">
+            <div class="page-control left" tabindex="0"><i class="fa-solid fa-arrow-left-long left-arrow"></i><p class="control">Previous</p></div>
+            <ul class="pages"></ul>
+            <div class="page-control right" tabindex="0"><p class="control">Next</p><i class="fa-solid fa-arrow-right-long right-arrow"></i></div>
+        </section>
+    </main>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
