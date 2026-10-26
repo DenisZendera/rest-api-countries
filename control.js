@@ -220,7 +220,7 @@ export function render(){
         });
 
     } else {
-        viewPort.innerHTML = `<p style="color: var(--dark-blue); padding: 1rem;">No countries found.</p>`;
+        viewPort.innerHTML = `<p class="not-found">No countries found.</p>`;
     }
 
     renderPaginationControls();
